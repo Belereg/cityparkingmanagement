@@ -8,6 +8,7 @@ public class CityparkingmanagementApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CityparkingmanagementApplication.class, args);
+        System.out.println("<--------------------------------------->");
     }
 
 }
