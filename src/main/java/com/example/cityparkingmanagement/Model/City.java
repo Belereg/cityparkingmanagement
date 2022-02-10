@@ -14,8 +14,6 @@ public class City {
     @Id
     @GeneratedValue(generator="system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    //@Size
     private String id;
 
     @Column(name = "name")
@@ -27,4 +25,12 @@ public class City {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id")
     private List<ParkingFacility> parkingFacilities;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
+    private List<CarPark> carParks;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
+    private List<BikeRack> bikeRacks;
 }

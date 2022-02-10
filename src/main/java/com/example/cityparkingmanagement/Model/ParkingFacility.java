@@ -21,4 +21,13 @@ public class ParkingFacility {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id", referencedColumnName = "id")
     private City city;
+
+    @OneToOne
+    @JoinColumn(name = "car_park_id", referencedColumnName = "id")
+    private CarPark carPark;
+
+    @OneToOne
+    @JoinColumn(name = "bike_rack_id", referencedColumnName = "id")
+    private BikeRack bikeRack;
+
 }

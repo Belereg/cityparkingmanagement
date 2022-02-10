@@ -5,10 +5,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name = "car_park")
+@Table(name = "bike_rack")
 @Data
-public class CarPark {
+public class BikeRack {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
