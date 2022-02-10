@@ -15,6 +15,9 @@ public class ParkingFacility {
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     private String id;
 
+    @Column(name = "random_test_field")
+    private String randomTestField;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id", referencedColumnName = "id")
     private City city;
